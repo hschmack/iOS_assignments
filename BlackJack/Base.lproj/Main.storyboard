@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BlackJack" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dealer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZ4-Oh-fFU">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="171" y="42" width="50" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYQ-ox-FKP">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="174" y="364" width="47" height="21"/>
+                                </variation>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card-back" translatesAutoresizingMaskIntoConstraints="NO" id="IgY-si-mgn">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="71" width="200" height="280"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card-back" translatesAutoresizingMaskIntoConstraints="NO" id="8KG-3T-lMH">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="64" y="71" width="200" height="280"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card-back" translatesAutoresizingMaskIntoConstraints="NO" id="JCf-TF-C1u">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="105" y="71" width="200" height="280"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card-back" translatesAutoresizingMaskIntoConstraints="NO" id="Eyt-Cv-dsv">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="143" y="71" width="200" height="280"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card-back" translatesAutoresizingMaskIntoConstraints="NO" id="Bw1-mY-of8">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="180" y="71" width="200" height="280"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card-back" translatesAutoresizingMaskIntoConstraints="NO" id="AY4-e0-0Pz">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="393" width="200" height="280"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card-back" translatesAutoresizingMaskIntoConstraints="NO" id="weW-mm-wvf">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="64" y="393" width="200" height="280"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card-back" translatesAutoresizingMaskIntoConstraints="NO" id="8fa-vD-VOP">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="105" y="393" width="200" height="280"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card-back" translatesAutoresizingMaskIntoConstraints="NO" id="CFl-m6-Utn">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="143" y="393" width="200" height="280"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card-back" translatesAutoresizingMaskIntoConstraints="NO" id="Nfd-tg-jx9">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="180" y="393" width="200" height="280"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JC4-UW-rB0">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Hit"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="105" y="681" width="30" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="userClickHit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s4P-DV-r5d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvM-74-4nc">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Stand"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="208" y="681" width="41" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="userClickStand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lAh-Dl-Ux6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cards Left: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duD-cF-EfC">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="8" y="20" width="161" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remaining Decks: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOy-o3-5Sv">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="210" y="20" width="190" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remaining Decks: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LeA-U9-L4b">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="210" y="20" width="190" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.74249080876542051" green="0.91081948167131266" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="cZ4-Oh-fFU"/>
+                                <exclude reference="oYQ-ox-FKP"/>
+                                <exclude reference="IgY-si-mgn"/>
+                                <exclude reference="8KG-3T-lMH"/>
+                                <exclude reference="JCf-TF-C1u"/>
+                                <exclude reference="Eyt-Cv-dsv"/>
+                                <exclude reference="Bw1-mY-of8"/>
+                                <exclude reference="AY4-e0-0Pz"/>
+                                <exclude reference="weW-mm-wvf"/>
+                                <exclude reference="8fa-vD-VOP"/>
+                                <exclude reference="CFl-m6-Utn"/>
+                                <exclude reference="Nfd-tg-jx9"/>
+                                <exclude reference="JC4-UW-rB0"/>
+                                <exclude reference="jvM-74-4nc"/>
+                                <exclude reference="duD-cF-EfC"/>
+                                <exclude reference="lOy-o3-5Sv"/>
+                                <exclude reference="LeA-U9-L4b"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="cZ4-Oh-fFU"/>
+                                <include reference="oYQ-ox-FKP"/>
+                                <include reference="IgY-si-mgn"/>
+                                <include reference="8KG-3T-lMH"/>
+                                <include reference="JCf-TF-C1u"/>
+                                <include reference="Eyt-Cv-dsv"/>
+                                <include reference="Bw1-mY-of8"/>
+                                <include reference="AY4-e0-0Pz"/>
+                                <include reference="weW-mm-wvf"/>
+                                <include reference="8fa-vD-VOP"/>
+                                <include reference="CFl-m6-Utn"/>
+                                <include reference="Nfd-tg-jx9"/>
+                                <include reference="JC4-UW-rB0"/>
+                                <include reference="jvM-74-4nc"/>
+                                <include reference="duD-cF-EfC"/>
+                                <include reference="lOy-o3-5Sv"/>
+                                <include reference="LeA-U9-L4b"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="buttonHit" destination="JC4-UW-rB0" id="DvF-Fr-X2d"/>
+                        <outlet property="buttonStand" destination="jvM-74-4nc" id="eDU-6y-KuL"/>
+                        <outlet property="cardCountLabel" destination="duD-cF-EfC" id="pib-sM-5x9"/>
+                        <outlet property="dealerCard1" destination="IgY-si-mgn" id="qQz-kA-hvo"/>
+                        <outlet property="dealerCard2" destination="8KG-3T-lMH" id="mIH-35-94C"/>
+                        <outlet property="dealerCard3" destination="JCf-TF-C1u" id="aGz-eg-4V6"/>
+                        <outlet property="dealerCard4" destination="Eyt-Cv-dsv" id="Y2j-fy-Q8o"/>
+                        <outlet property="dealerCard5" destination="Bw1-mY-of8" id="xYi-Gc-la7"/>
+                        <outlet property="deckCountLabel" destination="LeA-U9-L4b" id="ihS-Ed-Ym3"/>
+                        <outlet property="playerCard1" destination="AY4-e0-0Pz" id="pmB-Gx-6vR"/>
+                        <outlet property="playerCard2" destination="weW-mm-wvf" id="Bck-SE-QWk"/>
+                        <outlet property="playerCard3" destination="8fa-vD-VOP" id="I3W-K3-hrJ"/>
+                        <outlet property="playerCard4" destination="CFl-m6-Utn" id="kg7-YP-z1f"/>
+                        <outlet property="playerCard5" destination="Nfd-tg-jx9" id="NB9-eP-Fpm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="295.5" y="317.25"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="card-back" width="118" height="176"/>
+    </resources>
+</document>
