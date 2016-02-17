@@ -157,6 +157,14 @@ class BJDGameModel{
         }
     }
     
+    func getPlayerCardCount() -> Int {
+        return playerCards.count
+    }
+    
+    func getDealerCardCount() -> Int {
+        return dealerCards.count
+    }
+    
     private func areCardsBust(curCards: [Card]) -> Bool{
         var lowestScore = 0
         for card in curCards {
