@@ -81,7 +81,7 @@ class BJDGameModel{
     var gameStage : BJGameStage = .BJGameStagePlayer
     let maxPlayerCards = 5
     var didDealerWin = false
-    var numDecks : Int = 2 //
+    var numDecks : Int = 2
     
     
     init(){
@@ -230,12 +230,7 @@ class BJDGameModel{
                 gameStage = .BJGameStageGameOver
                 didDealerWin = true
                 notifyGameDidEnd()
-            }else if playerCards.count == maxPlayerCards{
-                //..
-                gameStage = .BJGameStageDealer
-                
             }
-            
         }else if gameStage == .BJGameStageDealer
         {
             if areCardsBust(dealerCards){

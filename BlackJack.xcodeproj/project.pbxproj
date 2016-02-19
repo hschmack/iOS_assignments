@@ -18,6 +18,7 @@
 		9F01ADBF1C624C9000711E9C /* card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F01ADBE1C624C9000711E9C /* card.swift */; };
 		C02B8B5A1C73C65A00E09ADA /* cardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B8B591C73C65A00E09ADA /* cardCollectionViewCell.swift */; };
 		C02B8B5C1C73C66F00E09ADA /* MyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B8B5B1C73C66F00E09ADA /* MyCollectionViewController.swift */; };
+		C04A0DD81C77AF9400854D62 /* MyUICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A0DD71C77AF9400854D62 /* MyUICollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		9F01ADBE1C624C9000711E9C /* card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = card.swift; sourceTree = "<group>"; };
 		C02B8B591C73C65A00E09ADA /* cardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardCollectionViewCell.swift; sourceTree = "<group>"; };
 		C02B8B5B1C73C66F00E09ADA /* MyCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewController.swift; sourceTree = "<group>"; };
+		C04A0DD71C77AF9400854D62 /* MyUICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyUICollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				9F01ADBC1C62494F00711E9C /* images */,
 				9F01AD971C5FAF6000711E9C /* LaunchScreen.storyboard */,
 				9F01AD9A1C5FAF6000711E9C /* Info.plist */,
+				C04A0DD71C77AF9400854D62 /* MyUICollectionView.swift */,
 			);
 			path = BlackJack;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			files = (
 				C02B8B5A1C73C65A00E09ADA /* cardCollectionViewCell.swift in Sources */,
 				9F01ADBF1C624C9000711E9C /* card.swift in Sources */,
+				C04A0DD81C77AF9400854D62 /* MyUICollectionView.swift in Sources */,
 				9F01AD911C5FAF6000711E9C /* ViewController.swift in Sources */,
 				C02B8B5C1C73C66F00E09ADA /* MyCollectionViewController.swift in Sources */,
 				9F01AD8F1C5FAF6000711E9C /* AppDelegate.swift in Sources */,

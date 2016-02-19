@@ -12,4 +12,5 @@ class cardCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var myCell: UIImageView!
     
+    @IBOutlet weak var playerCell: UIImageView!
 }

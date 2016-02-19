@@ -2,7 +2,7 @@
 //  MyCollectionViewController.swift
 //  BlackJack
 //
-//  Created by Jing Li on 2/10/16.
+//  Hayden Schmackpfeffer 2/17/16
 //  Copyright © 2016 CBC. All rights reserved.
 //
 
@@ -16,9 +16,8 @@ class MyCollectionViewController: UIViewController, UICollectionViewDataSource, 
     @IBOutlet weak var buttonStand: UIButton!
     
     @IBOutlet weak var dealerView: UICollectionView!
+    @IBOutlet weak var playerView: UICollectionView!
     
-//    private var dealerCardView = [Card]()
-//    private var playerCardView = [Card]()
     private var gameModel : BJDGameModel
     
     required init?(coder aDecoder: NSCoder) {
@@ -47,15 +46,21 @@ class MyCollectionViewController: UIViewController, UICollectionViewDataSource, 
         restartGame()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        promptForDecks()
+    }
+    
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if (collectionView == self.dealerView) {
+            return gameModel.getDealerCardCount()
+        } else if (collectionView == self.playerView) {
             return gameModel.getPlayerCardCount()
         }
-        return 2
+        return 6
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return 10
+        return 1
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -67,19 +72,34 @@ class MyCollectionViewController: UIViewController, UICollectionViewDataSource, 
         
         if (collectionView == dealerView) {
             if let dealerCard = gameModel.dealerCardAtIndex(i){
-                print ("CARD ADDED WITH VALUE: \(dealerCard.digit)")
                 if dealerCard.isFaceUp{
                     myCellView.myCell.image = dealerCard.getCardImage()
+                    myCellView.layer.zPosition = CGFloat(i);
                 }else{
                     myCellView.myCell.image = UIImage(named: "card-back.png")
+                    myCellView.layer.zPosition = CGFloat(i);
+                }
+            }
+        } else if (collectionView == playerView){
+            if let playerCard = gameModel.playerCardAtIndex(i) {
+                if playerCard.isFaceUp {
+                    myCellView.playerCell.image = playerCard.getCardImage()
+                    myCellView.layer.zPosition = CGFloat(i);
+                } else {
+                    myCellView.playerCell.image = UIImage(named: "card-back.png")
+                    myCellView.layer.zPosition = CGFloat(i);
                 }
             }
         }
         
         //position the cells
-        myCellView.frame.origin = CGPoint(x: i*30, y: 8)
+        //myCellView.frame.origin = CGPoint(x: i*30, y: 8)
         
         return myCellView
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return CGFloat(-100)
     }
     
     override func viewDidLoad() {
@@ -155,6 +175,7 @@ class MyCollectionViewController: UIViewController, UICollectionViewDataSource, 
         gameModel.checkIfPlayerHasBlackjack()
         renderCards()
         updateDeckCount()
+        renderDealer()
         
         buttonHit.enabled = true
         buttonStand.enabled = true
@@ -167,33 +188,37 @@ class MyCollectionViewController: UIViewController, UICollectionViewDataSource, 
         renderCards()
         //...
         gameModel.updateGameStage()
-        
-        if gameModel.gameStage == .BJGameStageDealer{
-            playDealerTurn()
-        }
     }
     
     @IBAction func playerStand(sender: UIButton) {
         gameModel.gameStage = .BJGameStageDealer
+        renderCards()
         playDealerTurn()
     }
     
+    // final function called, creates Notifcation that you are out of decks
     func gamesOverForReal() {
         buttonHit.enabled = false;
         buttonStand.enabled = false;
         
-        let alert = UIAlertController(title: "Blackjack", message: "Out of Decks", preferredStyle: UIAlertControllerStyle.Alert)
+        let alert = UIAlertController(title: "Blackjack", message: "Out of Decks Thanks for Playing, restart the app if you want to continue", preferredStyle: UIAlertControllerStyle.Alert)
         
         showViewController(alert, sender: self)
         
     }
-    
-    // CHANGE THIS
-    func renderCards(){
+    func renderDealer(){
         dealerView.reloadData()
     }
     
-    // DONT NEED TO CHANGE THESE
+    func renderCards(){
+        if (gameModel.gameStage == .BJGameStageDealer) {
+            dealerView.reloadData()
+        } else {
+            playerView.reloadData()
+        }
+        updateCardCount()
+    }
+
     func promptForDecks() {
         let deckPrompt = UIAlertController(title: "Blackjack", message: "Enter the amount of decks you want to play with", preferredStyle: UIAlertControllerStyle.Alert)
         deckPrompt.addTextFieldWithConfigurationHandler(addTextField)
